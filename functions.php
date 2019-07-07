@@ -1,5 +1,8 @@
+
 class ImageUpload {
 	public static function SetImageUpload($header_featured, $postId, $featuredsetImage = true, $metaKey = null){
+        require_once( ABSPATH . 'wp-admin/includes/admin.php' );
+        require_once(ABSPATH . 'wp-admin/includes/image.php');
 		$featured_img = wp_handle_upload( $header_featured, array('test_form' => false ) );
         $filename = $featured_img['file'];
 
